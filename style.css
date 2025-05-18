@@ -1,0 +1,599 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: url("assets\header.png");
+}
+
+a{
+    text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 100%;
+    background-image: url('assets/header.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+    border-bottom: #ee004c solid 8px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.menu{
+    width: 40%;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: azure;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    gap: 20px; 
+}
+
+.menu li{
+    display: inline;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 500px;
+}
+
+.toogle_btn{
+    position: absolute;
+    right: 4rem;
+    color:#ee004c;
+    /* width: ; */
+    height: auto;
+    cursor: pointer;
+    display: none;
+}
+.logo_icon{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+
+.contact_us{
+    padding: 5px 10px;
+    color: #ee004c;
+    background-color: azure;
+    border: #ee004c solid 1px;
+    border-radius: 24px;
+}
+
+.mywork{
+    margin-top: 50px;
+    padding: 5px 10px;
+    color: #ee004c;
+    background-color: azure;
+    border: #ee004c solid 1px;
+    border-radius: 24px;
+}
+
+.mywork_home{
+    margin-top: 50px;
+    padding: 5px 10px;
+    color: #ee004c;
+    background-color: azure;
+    border: #ee004c solid 1px;
+    border-radius: 24px;
+}
+
+.contact_us:hover{
+    padding: 5px 10px;
+    color: azure;
+    background-color: #ee004c;
+    border: azure solid 1px;
+    border-radius: 24px;
+    transition: all;
+    cursor: pointer;
+}
+
+.mywork:hover{
+    padding: 5px 10px;
+    color: azure;
+    background-color: #ee004c;
+    border: azure solid 1px;
+    border-radius: 24px;
+    transition: all;
+    cursor: pointer;
+}
+
+.header_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header_content_heading{
+    font-size:42px;
+    font-weight: bold;
+    color: #ee004c;
+    text-align: center;
+}
+
+.header_Content_paragraph{
+    font-size:12px;
+    color: azure;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.aboutwebsite_container{
+    margin-top: 20px;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+.heading{
+    font-size:32px;
+    font-weight: bold;
+    color: #ee004c;
+    text-align: center;
+}
+
+.content{
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+.creator_container{
+    margin-top: 30px;
+    margin-left: 110px;
+    margin-right: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.creator_container img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: #ee004c solid 2px;
+}
+
+.creators{
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.name{
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.post{
+    font-size: 14px;
+    color: #ee004c;
+}
+
+.footer_container{
+    margin-top: 50px;
+    background-color: rgb(43, 43, 43);
+    border-top: #ee004c solid 8px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 100px;
+}
+
+.footer_heading{
+    font-size:24px;
+    font-weight: bold;
+    color: #ee004c;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer_name{
+    color: #ee004c;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contactinfo_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_info_content{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer_content{
+    font-size: 16px;
+    color: azure;
+}
+
+.menu li:hover{
+    cursor: pointer;
+    background-image: linear-gradient(#ee004c,#e42763,white);
+    opacity: 0.9;
+    border-radius: 6px;
+    color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.menu a.active{
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-bottom: 2px solid #ee004c;
+    border-radius: 6px;
+    /* color:#ee004c; */
+}
+
+.image_intro{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+
+}
+
+.image_intro img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: #ee004c solid 2px;
+}
+
+.intro{
+    justify-content: flex-start;
+}
+
+.aboutme_container{
+    margin-top: 40px;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+.image_intro_quantum{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+
+}
+
+.image_intro_quantum img{
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+    border: #ee004c solid 2px;
+}
+
+.workflow_image{
+  display: flex;
+  justify-content: center;
+}
+
+.workflow_image img{
+    margin-top: 20px;
+    /* margin-left: 350px; */
+    width: 500px;
+    border-radius: 20px;
+    border: #ee004c solid 2px;
+}
+
+.pdf_container{
+    display: flex;
+  justify-content: center;
+}
+
+object {
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      width: 850px;
+      height: 1000px;
+      pointer-events: none; /* Prevents right-click and interactions */
+    }
+
+@media(max-device-width: 1165px){
+    .menu{
+    width: 60%;
+}
+.footer_container{
+    gap: 50px;
+}
+}
+
+@media(max-device-width:1072px){
+    .menu{
+    width: 70%;
+}
+    .contact_info_content{
+        margin-top: 10px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .image_intro_quantum{
+        display: flex;
+        flex-direction: column-reverse;
+        /* align-items: center;
+        justify-content: flex-start; */
+        gap: 40px;
+
+    }
+}
+
+.dropdown{
+    /* display: none; */
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0px;
+    width: 300px;
+    background: #ee004c4a;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown.open{
+    position: absolute;
+    right: 2rem;
+    top: 80px;
+    width: 300px;
+    background: #ee004c4a;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 320px;
+}
+
+.dropdown li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown a{
+    color: azure;
+}
+
+.dropdown a:hover{
+    color: #ee004c;
+}
+
+.dropdown .contact_uc_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-device-width: 800px){
+
+    .navbar{
+        position: relative;
+        padding: 56px;
+    }
+    .footer_container{
+    margin-top: 50px;
+    background-color: rgb(43, 43, 43);
+    border-top: #ee004c solid 8px;
+    display: block;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 50px;
+}
+.contactinfo_container{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+.address_container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar .menu,
+.navbar .call_to_action{
+    display: none;
+}
+.navbar .toogle_btn{
+    display: block;
+}
+
+.dropdown{
+    display: block;
+}
+
+.navbar .logo{
+    position: absolute;
+    left: 3rem;
+}
+
+    .header_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.header_content_heading{
+    font-size:36px;
+    font-weight: bold;
+    color: #ee004c;
+    text-align: center;
+}
+
+.header_Content_paragraph{
+    font-size:12px;
+    color: azure;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.mywork_home{
+    margin-top: 20px;
+}
+.mywork{
+    margin-top: 20px;
+}
+
+.aboutwebsite_container{
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.image_intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+
+}
+
+.aboutme_container{
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.image_intro_quantum img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    border: #ee004c solid 2px;
+}
+
+.workflow_image img{
+    margin-top: 20px;
+    /* margin-left: 350px; */
+    width: 300px;
+    border-radius: 10px;
+    border: #ee004c solid 2px;
+}
+
+object {
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      width: 600px;
+      height: 850px;
+      pointer-events: none; /* Prevents right-click and interactions */
+    }
+
+}
+
+@media(max-device-width:400px){
+    .dropdown{
+        left: 2rem;
+        width: unset;
+    }
+
+    .header_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.header_content_heading{
+    font-size:24px;
+    font-weight: bold;
+    color: #ee004c;
+    text-align: center;
+}
+
+.header_Content_paragraph{
+    font-size:12px;
+    color: azure;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.mywork_home{
+    margin-top: 10px;
+}
+.mywork{
+    margin-top: 10px;
+}
+
+.creators{
+    margin-top:30px;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.aboutwebsite_container{
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.aboutme_container{
+    margin-top: 20px;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+.image_intro_quantum img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    border: #ee004c solid 2px;
+}
+
+.workflow_image img{
+    margin-top: 20px;
+    /* margin-left: 350px; */
+    width: 250px;
+    border-radius: 10px;
+    border: #ee004c solid 2px;
+}
+
+}
