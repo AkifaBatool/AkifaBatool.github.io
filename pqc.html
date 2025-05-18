@@ -85,14 +85,19 @@
         <br>
         <div class="aboutwebsite_container">
             <div class="heading">
-                <p class="heading_content">What is Shor's Algorithm?</p>
+                <p class="heading_content">NIST Contribution</p>
             </div>
             <div class="content">
-                <p class="content">Shor’s Algorithm is a quantum algorithm developed by mathematician Peter Shor in 1994. It is known for its ability to factor large numbers and compute discrete logarithms much faster than any known classical algorithm. This is important because many widely used encryption systems, like RSA and elliptic curve cryptography (ECC), rely on the fact that factoring large numbers or solving discrete logarithms is extremely difficult using classical computers.
-                <br>
-                <br>
-                What makes Shor’s Algorithm significant is that it takes advantage of quantum mechanics to solve these problems efficiently. A powerful quantum computer running Shor’s Algorithm could break the security of many classical cryptographic systems in a matter of seconds—something that would take traditional computers millions of years. This potential threat is one of the main reasons why the cryptographic community is actively developing post-quantum algorithms to ensure security in the era of quantum computing.</p>
-            </div>
+                <p class="content">The National Institute of Standards and Technology (NIST) is a U.S.-based government agency that works to promote innovation and industrial competitiveness by advancing measurement science, standards, and technology. In the world of cryptography, NIST plays a vital role in developing and standardizing secure algorithms that can be used globally. With the rise of quantum computing and its potential to break current cryptographic systems, NIST recognized the need to prepare for a post-quantum future.
+<br>
+<br>
+To address this challenge, NIST launched the Post-Quantum Cryptography Standardization Project, often referred to as the NIST competition. This open competition invited researchers worldwide to submit cryptographic algorithms that could resist attacks from quantum computers. The goal was to evaluate, test, and ultimately standardize the most promising algorithms that could replace or supplement existing encryption systems. The process included multiple rounds of submissions, public reviews, and performance testing to ensure security, efficiency, and practicality.
+<br>
+<br>
+SIDH (Supersingular Isogeny Diffie-Hellman) was one of the innovative proposals accepted in the early rounds of this competition. It stood out due to its strong mathematical foundations and potential for small key sizes, making it suitable for constrained environments. While SIDH was eventually retired due to newly discovered vulnerabilities, its participation highlighted the importance of exploring diverse mathematical ideas in cryptography. SIDH contributed significantly to the broader understanding of isogeny-based cryptography and played a meaningful role in shaping the research landscape during the competition.
+<br>
+<br>
+A prominent implementation of SIDH developed for practical use in the NIST competition was SIKE (Supersingular Isogeny Key Encapsulation). SIKE was designed as a key exchange mechanism built upon the SIDH framework, with an emphasis on secure encapsulation and compact communication. Despite its eventual withdrawal from the standardization process due to emerging cryptanalytic attacks, SIKE remains an important research milestone in isogeny-based cryptography. My project focuses on implementing the SIKE version of SIDH, as it not only provides an opportunity to deeply explore the mathematical structure of isogenies but also allows for hands-on experience with a real-world cryptographic protocol once considered viable for securing communications in the post-quantum era.</p>            </div>
         </div>
         <div class="footer_container">
             <div class="address_container">
