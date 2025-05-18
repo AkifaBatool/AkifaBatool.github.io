@@ -539,7 +539,7 @@ object {
     .header{
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 40vh;
     width: 100%;
     background-image: url('assets/header.png');
     background-repeat: no-repeat;
