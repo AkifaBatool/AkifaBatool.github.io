@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="\style.css">
+    <link rel="icon" href="\assets\favicon.png" type="image/x-icon">
+    <script src="\index.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="\assets\security.png" class='logo_icon' alt=""></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html" class="menuitem">Home</a></li>
+                        <li><a href="aboutme.html" class="menuitem" id="me">About Me</a></li>
+                        <li><a href="aboutsupervisor.html" class="menuitem" id="supervisor">About Supervisor</a></li>
+                        <li><a href="pqc.html" class="menuitem">PQC</a></li>
+                        <li><a href="sidhprotocol.html" class="menuitem">SIDH Protocol</a></li>
+                        <li><a href="theory.html" class="menuitem active">Theory</a></li>
+                    </ul>
+                </div>
+                <div class="call_to_action">
+                    <a href="#contactInfo">
+                        <p class="contact_us">Contact Us</p>
+                    </a>
+                </div>
+                <div class="toogle_btn">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li><a href="index.html" class="menuitem">Home</a></li>
+                        <li><a href="aboutme.html" class="menuitem" id="me">About Me</a></li>
+                        <li><a href="aboutsupervisor.html" class="menuitem" id="supervisor">About Supervisor</a></li>
+                        <li><a href="pqc.html" class="menuitem">PQC</a></li>
+                        <li><a href="sidhprotocol.html" class="menuitem">SIDH Protocol</a></li>
+                        <li><a href="theory.html" class="menuitem active">Theory</a></li>
+                        <li class="contact_uc_btn"><a href="#contactInfo">
+                        <p class="contact_us">Contact Us</p>
+                    </a></li>
+            </div>
+            <div class="header_content">
+                <p class="header_content_heading">Rich Mathematics</p>
+                <p class="header_Content_paragraph">The SIDH protocol is deeply rooted in advanced mathematical concepts, particularly in the <br> field of algebraic geometry and number theory. Understanding and implementing it requires a <br> strong foundation in mathematics and a clear grasp of elliptic curve theory and isogeny computations.</p>
+                <div class="call_to_action">
+                <a href="sidhprotocol.html#mywork">
+                    <p class="mywork_home">See My Work</p>
+                </a>
+            </div>
+            </div>
+        </div>
+        <div class="aboutwebsite_container">
+            <div class="heading">
+                <p class="heading_content">Mathematics Behind SIDH</p>
+            </div>
+            <div class="content">
+                <p class="content">The Supersingular Isogeny Diffie-Hellman (SIDH) protocol is a key exchange mechanism based on the hardness of computing isogenies between supersingular elliptic curves. Unlike classical methods, which rely on problems like integer factorization or discrete logarithms, SIDH leverages the mathematical structure of elliptic curves and isogenies to provide security even against quantum computers. Its key idea is to use torsion points to generate isogenies and compute shared secrets between two parties. The protocol’s design enables compact key sizes and efficient performance, making it an appealing choice for post-quantum cryptography.
+                <br>
+                <br>
+                An elliptic curve over a finite field \( \mathbb{F}_p \) (or an extension field \( \mathbb{F}_{p^2} \)) is defined by an equation of the form:
+                \[
+                E: y^2 = x^3 + ax + b
+                \]
+                where \( a, b \in \mathbb{F}_p \), and the discriminant \( \Delta = -16(4a^3 + 27b^2) \) is non-zero to ensure the curve is non-singular. Every elliptic curve has an associated j-invariant, a value that classifies the curve up to isomorphism over an algebraically closed field. It is defined as:
+                \[
+                j(E) = 1728 \cdot \frac{4a^3}{4a^3 + 27b^2}
+                \]
+                In SIDH, the j-invariant plays a crucial role in computing the shared secret since the j-invariant of the resulting isogeny image curve is used as the final output of the protocol.
+                <br>
+                <br>
+                Elliptic curves are algebraic varieties, meaning they are defined as the solution sets of polynomial equations. As such, the points on an elliptic curve can be represented in different coordinate systems. The most common are affine coordinates, where each point is given by \( (x, y) \), and projective coordinates, where a point is expressed as \( (X : Y : Z) \), satisfying the homogeneous equation:
+                \[
+                Y^2 Z = X^3 + aXZ^2 + bZ^3
+                \]
+                Affine coordinates are suitable for simple computations, while projective coordinates are preferred in many cryptographic applications to avoid costly inversion operations in finite fields.
+                <br>
+                <br>
+                In general, projective space \( \mathbb{P}^n \) is the set of all lines through the origin in \( \mathbb{F}^{n+1} \), and it allows for a uniform treatment of points at infinity. Each point in projective space is represented by a tuple \( (X_0 : X_1 : \cdots : X_n) \), not all zero, with equivalence defined by scalar multiplication: \( (X_0 : \cdots : X_n) \sim (\lambda X_0 : \cdots : \lambda X_n) \) for any nonzero \( \lambda \in \mathbb{F} \).
+                <br>
+                <br>
+                A projective curve is an algebraic curve defined in projective space. For elliptic curves, the projective model ensures that the curve remains well-defined even at infinity, which is crucial for handling operations like point addition uniformly.
+                <br>
+                <br>
+                This homogeneous form ensures the curve includes the point at infinity \( (0 : 1 : 0) \), which serves as the identity element in the elliptic curve group law.
+                <br>
+                <br>
+                To perform isogeny-based key exchange, torsion points of elliptic curves are essential. In SIDH, two distinct primes (typically 2 and 3) are used, and torsion subgroups of corresponding orders are exploited. To compute these torsion points, the Weil pairing is often used. The general formula for the Weil pairing between two \( m \)-torsion points \( P \) and \( Q \) on an elliptic curve is:
+                \[
+                e_m(P, Q) \in \mu_m
+                \]
+                This bilinear and alternating pairing helps verify linear independence of torsion points, a property vital for SIDH to ensure the construction of correct and non-degenerate isogenies.
+                <br>
+                <br>
+                The actual mapping of isogenies between curves is computed using Vélu’s formula, which provides a way to construct an isogeny from a known finite subgroup \( G \subset E \). The general form of Vélu's formula gives the isogeny \( \phi: E \rightarrow E' = E/G \), and the mapping of a point \( P \in E \) is expressed as:
+                \[
+                \phi(P) = P + \sum_{Q \in G \setminus \{0\}} (Q - [1]P)
+                \]
+                This ensures that the structure of the subgroup \( G \) is correctly transferred onto the codomain curve \( E' \), forming the basis for secure communication.
+                <br>
+                <br>
+                In typical implementations of isogenies, especially those arising from Vélu’s formula, the y-coordinate of a mapped point is often computed as a constant multiple of the derivative of the x-coordinate of the isogeny map. Mathematically, this is expressed as:
+                \[
+                \phi(P) = (f(x),y \cdot f(x)')
+                \]
+                Additionally, understanding the structure of supersingular elliptic curves, their rich endomorphism rings, and the difference between ordinary and supersingular curves are all foundational to working with SIDH. Supersingular curves are chosen because their endomorphism rings are non-commutative, increasing the difficulty of reverse-engineering the isogeny path — a core security feature of the protocol.
+                <br>
+                <br>
+                Together, these mathematical concepts build the theoretical foundation upon which the SIDH protocol is constructed.
+            </p>
+            </div>
+        </div>
+        <div class="footer_container">
+            <div class="address_container">
+                <div class="footer_heading">
+                    <p class="heading_content">Address</p>
+                </div>
+                <div class="footer_main_content">
+                    <p class="footer_content">Centre for Advanced Studies in Pure and Applied Mathematics (CASPAM) <br>
+Bahauddin Zakariya University, Multan, PAKISTAN</p>
+                </div>
+            </div>
+            <div class="contactinfo_container" id="contactInfo">
+                <div class="footer_heading">
+                    <p class="heading_content">Contact Info</p>
+                </div>
+                <div class="contact_info_content">
+                    <div class="contact_drathar">
+                        <div class="footer_name">
+                            <p>Dr. Athar Kharal</p>
+                        </div>
+                        <div class="footer_content">
+                            <p>Email: atharkharal@gmail.com</p>
+                            <!-- <p>atharkharal@gmail.com</p> -->
+                        </div>
+                        <div class="footer_content">
+                            <p>WhatsApp: +92 323 7263699</p>
+                            <!-- <p>+92 323 7263699</p> -->
+                        </div>
+                    </div>
+                    <div class="contact_akifa">
+                        <div class="footer_name">
+                            <p>Akifa Batool</p>
+                        </div>
+                        <div class="footer_content">
+                            <p>Email: akifabatool8589@gmail.com</p>
+                            <!-- <p>akifabatool8589@gmail.com</p> -->
+                        </div>
+                        <div class="footer_content">
+                            <p>WhatsApp: +92 335 7882323</p>
+                            <!-- <p>+92 335 7882323</p> -->
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script src="\index.js"></script>
+</body>
+</html>
