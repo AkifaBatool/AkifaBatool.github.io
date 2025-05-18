@@ -408,7 +408,7 @@ object {
 }
 
 @media(max-device-width: 800px){
-
+    .header{height:40vh;}
     .navbar{
         position: relative;
         padding: 56px;
@@ -526,6 +526,7 @@ object {
 }
 
 @media(max-device-width:400px){
+    .header{height:30vh;}
     .dropdown{
         left: 2rem;
         width: unset;
