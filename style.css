@@ -408,7 +408,17 @@ object {
 }
 
 @media(max-device-width: 800px){
-    .header{height:40vh;}
+    .header{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 100%;
+    background-image: url('assets/header.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+    border-bottom: #ee004c solid 8px;
+}
     .navbar{
         position: relative;
         padding: 56px;
@@ -526,7 +536,17 @@ object {
 }
 
 @media(max-device-width:400px){
-    .header{height:30vh;}
+    .header{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 100%;
+    background-image: url('assets/header.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+    border-bottom: #ee004c solid 8px;
+    }
     .dropdown{
         left: 2rem;
         width: unset;
