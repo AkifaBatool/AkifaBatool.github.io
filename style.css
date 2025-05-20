@@ -245,6 +245,17 @@ html {
     color: azure;
 }
 
+.social_account{
+    display: flex;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+.social_account i{
+    color: #ee004c;
+    gap: 50px;
+}
+
 .menu li:hover{
     cursor: pointer;
     background-image: linear-gradient(#ee004c,#e42763,white);
@@ -317,16 +328,98 @@ html {
     border: #ee004c solid 2px;
 }
 
-.pdf_container{
+.view_opt{
+    margin-top: 20px;
     display: flex;
-  justify-content: center;
+    justify-content: center;
+    align-items:flex-end;
+    gap: 8px;
+    color: #ee004c;
+    cursor: pointer;
 }
 
-.wrapper {
-   width: 35%;
+.view_opt .content{
+    color: #ee004c;
+    font-weight: bold;
+}
+
+#project_report{
+    display: none;
+   width: 50%;
    margin: 0px auto;
 }
 
+#project_code{
+    display: none;
+   width: 70%;
+   margin: 0px auto;
+}
+
+#project_presentation{
+    display: none;
+    width: 50%;
+   margin: 0px auto;
+}
+
+.flash_card{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.card{
+    padding: 8px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background-color:#ee004c1a;
+    backdrop-filter: blur(15%);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.card .content{
+    font-size: 12px;
+    text-align: center;
+}
+
+.card .footer_name{
+    font-size: 20px;
+}
+
+.card:hover{
+    padding: 8px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background-color:#ee004c2a;
+    backdrop-filter: blur(15%);
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    cursor: pointer;
+    border: #e42763 solid 2px;
+    transform: translateY(-2%);
+}
+
+
+.ppt_container{
+    display: flex;
+  justify-content: center;
+    height: 0;
+   width: 100%;
+   padding-bottom: 90%; /* play with this until right */
+   overflow: hidden;
+   position: relative;
+}
 
 .pdf_container{
     display: flex;
@@ -336,6 +429,41 @@ html {
    padding-bottom: 140%; /* play with this until right */
    overflow: hidden;
    position: relative;
+}
+
+.code_container{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  justify-content: center;
+  align-items: center;
+    /* height: 0;
+   width: 100%;
+   padding-bottom: 90%; 
+   overflow: hidden; */
+   position: relative;
+}
+
+.code_container img{
+    width: 500px;
+    /* height: 150px; */
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.code_imgintro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.code_imgintro .content{
+    font-weight: 600;
+    font-size: 14px;
+    color: #ee004c;
 }
 
 object {
@@ -429,6 +557,15 @@ object {
 }
 
 @media(max-device-width: 800px){
+    .flash_card{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+    
     .header{
     display: flex;
     flex-direction: column;
@@ -575,6 +712,22 @@ object {
       pointer-events: none; /* Prevents right-click and interactions */
     }
 
+    .code_container img{
+    width: 450px;
+    /* height: 150px; */
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+}
+
+@media(max-device-width:600px){
+    .code_container img{
+    width: 300px;
+    /* height: 150px; */
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
 }
 
 @media(max-device-width:400px){
@@ -687,5 +840,11 @@ object {
       height: 1000px; */
       pointer-events: none; /* Prevents right-click and interactions */
     }
+
+    .code_container img{
+    width: 200px;
+    /* height: 150px; */
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);}
 
 }
