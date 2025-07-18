@@ -300,6 +300,10 @@ html {
     margin-right: 110px;
 }
 
+.aboutme_container a{
+    text-decoration: none;
+}
+
 .image_intro_quantum{
     display: flex;
     align-items: center;
