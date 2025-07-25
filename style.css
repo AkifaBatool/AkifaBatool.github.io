@@ -21,7 +21,7 @@ html {
 .header{
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    height: 80vh;
     width: 100%;
     background-image: url('assets/background.png');
     background-repeat: no-repeat;
