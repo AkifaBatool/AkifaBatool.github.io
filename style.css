@@ -20,7 +20,7 @@ html {
 .header{
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     background-image: url('assets/background.png');
     background-repeat: no-repeat;
@@ -34,7 +34,9 @@ html {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    cursor: pointer;
+    background-color: #ee004c;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 0 #ee004c;
 }
 
 .menu{
@@ -44,6 +46,7 @@ html {
 .navbar a{
     text-decoration: none;
     color: azure;
+    cursor: pointer;
 }
 
 .menu ul{
