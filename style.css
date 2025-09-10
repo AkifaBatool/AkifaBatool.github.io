@@ -34,8 +34,9 @@ html {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    background: #ee004c4a;
-    backdrop-filter: blur(15px);
+    background-color: #ee004c;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 0 #ee004c;
 }
 
 .menu{
