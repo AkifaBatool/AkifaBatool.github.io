@@ -7,6 +7,7 @@
 
 body{
     height: 100vh;
+    background-image: url("assets\background.png");
 }
 
 a{
@@ -20,7 +21,7 @@ html {
 .header{
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     background-image: url('assets/background.png');
     background-repeat: no-repeat;
